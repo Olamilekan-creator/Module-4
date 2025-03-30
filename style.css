@@ -201,11 +201,12 @@ LANDING PAGE
   font-size: 24px;
   line-height: 2;
   max-width: 450px;
+  margin-bottom: 16px;
 }
 
 .social__list {
-  margin-top: 16px;
   display: flex;
+align-items: center;
 }
 
 .social__link {
@@ -230,7 +231,8 @@ LANDING PAGE
   border: none;
   background-color: #242424;
   color: white;
-  position: absolute;
+  z-index: 1000;
+  position: fixed;
   bottom: 32px;
   right: 40px;
 }
@@ -511,7 +513,7 @@ PROJECTS
 
 .project__img {
   width: 100%;
-  transition: all 600ms ease;
+  transition: all 300ms ease;
 }
 
 .project:hover .project__img {
@@ -533,13 +535,12 @@ PROJECTS
 
 .project__wrapper:hover .project__img {
   transform: scale(1.07);
-  filter: blur(5px);
 }
 
 .project__description {
   position: absolute;
   top: 50%;
-  left: 90px;
+  margin: 0 30px;
   transform: translateY(-50%);
   color: white;
   opacity: 0;
@@ -547,8 +548,10 @@ PROJECTS
   max-width: 550px;
 }
 
-.project__wrapper:hover .project__wrapper--bg {
-  opacity: 0.7;
+.project__wrapper:hover,
+ .project__wrapper--bg:hover {
+  opacity: 0.8;
+
 }
 
 .project__wrapper--bg {
@@ -557,8 +560,7 @@ PROJECTS
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #1c1d25;
-  opacity: 0.7;
+
 }
 
 .project__description--title {
