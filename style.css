@@ -368,6 +368,8 @@ MODAL
 .modal__languages {
   display: flex;
   flex-wrap: wrap;
+  max-width: 250px;
+  gap: 10px;
 }
 
 .modal__language {
@@ -541,7 +543,7 @@ PROJECTS
 .project__description {
   position: absolute;
   top: 50%;
-  margin: 0 30px;
+  margin: 0 40px;
   transform: translateY(-50%);
   color: white;
   opacity: 0;
